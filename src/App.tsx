@@ -1,6 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import MainPage from '@/pages/index'
+import AboutPage from '@/pages/about'
 function App() {
   return (
-    <div>App 컴포넌트 화면입니다.</div>
+    <BrowserRouter>
+        <Routes>
+          <Route index path = "/" element={<MainPage />}></Route>
+          <Route path = "/about" element={<AboutPage />}></Route>
+          <Route path = "/about/:id" element={<AboutPage />}></Route>
+
+        </Routes>
+    </BrowserRouter>
   )
 }
 
